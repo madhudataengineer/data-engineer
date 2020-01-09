@@ -4,7 +4,7 @@ from pyspark.sql import Row
 from pyspark.sql.types import *
 from pyspark.sql import functions as f
 from pyspark.sql.functions import *
-
+#Chat project with batch processing
 sp= SparkSession.builder.enableHiveSupport().getOrCreate()
 lines=sp.sparkContext.textFile("file:/home/hduser/chatdata.txt")
 p=lines.map(lambda l:l.split("~"))
